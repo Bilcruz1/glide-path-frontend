@@ -1,0 +1,241 @@
+import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
+import { motion, AnimatePresence } from 'framer-motion';
+import { scroller } from 'react-scroll';
+
+import 'swiper/css';
+import slide1 from '../assets/images/home_1.png';
+import slide2 from '../assets/images/home_2.png';
+import slide3 from '../assets/images/home_3.png';
+import glideHome from '../assets/images/Glide-Home.jpg';
+import tiktok from '../assets/icons/Glide-Tiktok.svg';
+import fb from '../assets/icons/Glide-Facebook.svg';
+import twitter from '../assets/icons/Glide-X.svg';
+import linkedin from '../assets/icons/Glide-LinkedIn.svg';
+import instagram from '../assets/icons/Glide-Instagram.svg';
+import Nav from './nav';
+
+const slides = [
+	{
+		image: slide1,
+		title: (
+			<>
+				<div className="hidden lg:block">
+					Drive with Confidence,&nbsp;
+					<span className="text-[#278FFF]">Reliable Repairs Guaranteed!</span>
+				</div>
+				<div className="lg:hidden block">
+					<p>Drive with Confidence</p>
+					<p className="text-[#278FFF]">Reliable Repairs</p>
+					<p className="text-[#278FFF]">Guaranteed!</p>
+				</div>
+			</>
+		),
+		subtitle:
+			'Welcome to Zitaj, your trusted partner for top-quality automobile repair and maintenances',
+	},
+	{
+		image: slide2,
+		title: (
+			<>
+				Certified Professionals&nbsp;
+				<span className="text-[#278FFF]">With Years Experience</span>
+			</>
+		),
+		subtitle:
+			'At Zitaj Auto Repair, we bring your vehicle back to peak performance with expert diagnostics, skilled technicians, and unmatched customer service.',
+	},
+	{
+		image: slide3,
+		title: (
+			<>
+				Modern Equipment For&nbsp;
+				<span className="text-[#278FFF]">Accurate diagnosis and repairs</span>
+			</>
+		),
+		subtitle:
+			' From routine oil changes to complex engine repairs, we ensure your ride is smooth, safe, and reliable. Drive with confidence because your car deserves the best!',
+	},
+];
+
+// Animation configs
+const imageVariants = {
+	initial: { opacity: 0, scale: 1.1, x: 60 },
+	animate: {
+		opacity: 1,
+		scale: 1,
+		x: 0,
+		transition: { duration: 1.2, ease: 'easeOut' },
+	},
+	exit: {
+		opacity: 0,
+		scale: 0.95,
+		x: -60,
+		transition: { duration: 1, ease: 'easeIn' },
+	},
+};
+
+const textVariants = {
+	initial: { opacity: 0, x: -50 },
+	animate: {
+		opacity: 1,
+		x: 0,
+		transition: { duration: 1, delay: 0.4, ease: 'easeOut' },
+	},
+	exit: { opacity: 0, x: 50, transition: { duration: 0.8, ease: 'easeIn' } },
+};
+
+export default function HeroSlider() {
+	const [activeIndex, setActiveIndex] = React.useState(0);
+
+	return (
+		<>
+			<section
+				className="w-full lg:h-screen  bg-[url('/src/assets/images/glidePath-heroPage.jpg')] lg:pt-[32px]  overflow-hidden"
+				id="home"
+			>
+				<Nav />
+
+				<div className="lg:min-h-screen flex items-center justify-center lg:-mt-[40px] mt-[30px]">
+					<div className="lg:w-[870px] w-[246px] text-center">
+						{/* Main Heading */}
+						<div className="flex flex-col items-center justify-center mb-[50px] px-4">
+							<h1 className="text-4xl lg:text-[100px] font-MissLeGatees lg:tracking-wide self-start text-[#0077B6]">
+								{'Your Journey,'.split('').map((char, index) => (
+									<span
+										key={index}
+										className="inline-block animate-fadeIn"
+										style={{
+											animationDelay: `${index * 0.1}s`,
+											animationFillMode: 'forwards',
+											opacity: 0,
+										}}
+									>
+										{char === ' ' ? '\u00A0' : char}
+									</span>
+								))}
+							</h1>
+							<h1 className="text-4xl lg:text-[100px] font-MissLeGatees lg:tracking-wide text-[#DBC087] self-end mt-4 lg:mt-[100px]">
+								{'Our Priority'.split('').map((char, index) => (
+									<span
+										key={index}
+										className="inline-block animate-fadeIn"
+										style={{
+											animationDelay: `${(index + 14) * 0.1}s`,
+											animationFillMode: 'forwards',
+											opacity: 0,
+										}}
+									>
+										{char === ' ' ? '\u00A0' : char}
+									</span>
+								))}
+							</h1>
+						</div>
+
+						{/* Subtitle */}
+						<p
+							className="text-[14px] lg:text-[36px] lg:leading-[44px] leading-[17px] text-center font-Montserrat italic text-[#000000] mb-8 sm:mb-10 lg:pt-10  animate-fadeIn"
+							style={{
+								animationDelay: '2.6s',
+								animationFillMode: 'forwards',
+								opacity: 0,
+							}}
+						>
+							Trusted travel solutions for Hajj, Umrah,
+							<br className="hidden sm:block" />
+							<span className="block sm:inline"> and global destinations.</span>
+						</p>
+
+						{/* CTA Button */}
+						<div
+							className="flex justify-center items-center px-4 lg:mb-0 mb-[15px] animate-fadeIn"
+							style={{
+								animationDelay: '3s',
+								animationFillMode: 'forwards',
+								opacity: 0,
+							}}
+						>
+							<button
+								className="bg-[#0077B6]  text-[#ffffff] font-semibold lg:py-[19px] lg:px-[98px] py-[14px] px-[35px] sm:px-8 rounded-lg transition-colors duration-200 whitespace-nowrap text-sm sm:text-base"
+								style={{ backgroundColor: '#0B7FAF' }}
+							>
+								Plan My Trip | Contact Us
+							</button>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<div className="bg-[url('/src/assets/images/glidePath-heroPage.jpg')]">
+				<div className="relative lg:pl-[80px]  flex w-screen">
+					<div className="relative w-full">
+						<img
+							src={glideHome}
+							alt="glidehome"
+							className="w-full rounded-lg"
+						/>
+
+						{/* Social icons container - mobile only, positioned at right */}
+						<div className="lg:hidden absolute right-0 top-0  bg-[#ffffff]/80 shadow-xl rounded-l-3xl flex flex-col items-center justify-center p-2 space-y-2">
+							<img
+								src={instagram}
+								alt="instagram"
+								className="w-[25px] h-[25px]"
+							/>
+							<img
+								src={fb}
+								alt="facebook"
+								className="w-[25px] h-[25px]"
+							/>
+							<img
+								src={twitter}
+								alt="twitter"
+								className="w-[25px] h-[25px]"
+							/>
+							<img
+								src={linkedin}
+								alt="linkedin"
+								className="w-[25px] h-[25px]"
+							/>
+							<img
+								src={tiktok}
+								alt="tiktok"
+								className="w-[25px] h-[25px]"
+							/>
+						</div>
+					</div>
+
+					{/* Social icons container - desktop only */}
+					<div className="hidden lg:flex bg-[#ffffff]/80 -ml-4  z-50 shadow-xl rounded-l-3xl flex-col items-center justify-center h-fit p-5 space-y-3">
+						<img
+							src={instagram}
+							alt="instagram"
+							className="w-[73px] h-[73px]"
+						/>
+						<img
+							src={fb}
+							alt="facebook"
+							className="w-[73px] h-[73px]"
+						/>
+						<img
+							src={twitter}
+							alt="twitter"
+							className="w-[73px] h-[73px]"
+						/>
+						<img
+							src={linkedin}
+							alt="linkedin"
+							className="w-[73px] h-[73px]"
+						/>
+						<img
+							src={tiktok}
+							alt="tiktok"
+							className="w-[73px] h-[73px]"
+						/>
+					</div>
+				</div>
+			</div>
+		</>
+	);
+}
