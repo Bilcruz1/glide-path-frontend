@@ -116,12 +116,13 @@ function Footer() {
                 </li>
               </ul>
               {/* Email  */}
-              <div className="mt-[100px] text-sm flex  items-center gap-2 absolute bottom-[60px]">
-                <div>
-                  <img src={email1} alt="Email" className=" " />
-                </div>
-                <div>
+              <div className="mt-[100px] text-sm absolute">
+                <div className="flex  ">
                   <div>
+                    <img src={email1} alt="Email" className="absolute " />
+                  </div>
+
+                  <div className="ml-[50px]">
                     <div className="font-semibold  text-[24px]">Email:</div>{" "}
                     <a
                       href="mailto:info@glidepath.com"
@@ -207,20 +208,20 @@ function Footer() {
                 <input
                   type="text"
                   placeholder="Name"
-                  className="px-4 py-5 rounded-3xl bg-[#0077B660] text-[#615E5B] text-[20px] placeholder-[#615E5B] outline-none w-full"
+                  className="px-4 py-5 rounded-3xl bg-[#0077B660] text-[#615E5B] text-[11px] placeholder-[#615E5B] outline-none w-full"
                 />
                 <input
                   type="email"
                   placeholder="Email address"
-                  className="px-4 py-5 rounded-3xl bg-[#0077B660] text-[#615E5B] text-[20px] placeholder-[#615E5B] outline-none w-full"
+                  className="px-4 py-5 rounded-3xl bg-[#0077B660] text-[#615E5B] text-[11px] placeholder-[#615E5B] outline-none w-full"
                 />
                 <textarea
                   rows="3"
                   placeholder="Message"
-                  className="px-4 py-4 rounded-3xl bg-[#0077B660] text-[#615E5B] text-[20px] placeholder-[#615E5B] outline-none w-full"
+                  className="px-4 py-4 rounded-3xl bg-[#0077B660] text-[#615E5B] text-[11px] placeholder-[#615E5B] outline-none w-full"
                 ></textarea>
                 <div className="text-center">
-                  <button className="bg-[#005B8A] text-[#ffffff] py-2 rounded-full font-medium text-[24px] hover:bg-blue-900 transition min-w-[250px]  ">
+                  <button className="bg-[#005B8A] text-[#ffffff] py-3 rounded-full font-medium text-[14px] hover:bg-blue-900 transition min-w-[250px]  ">
                     Send now
                   </button>
                 </div>
@@ -228,11 +229,11 @@ function Footer() {
             </div>
           </div>
         </footer>
-        <footer className="px-[45px] pb-[20px] bg-[url('/src/assets/images/contactbgm.png')] bg-[#005B8A]">
+        <footer className="px-[30px] pb-[20px] bg-[url('/src/assets/images/contactbgm.png')] bg-[#005B8A] font-Montserrat">
           <div className="">
             <div className="flex justify-between py-9">
-              <div className="relative">
-                <h3 className="font-semibold mb-3 text-[20px]">Glidepath</h3>
+              <div className="">
+                <h3 className="font-semibold mb-3 text-[16px]">Glidepath</h3>
                 <ul className="space-y-4 text-[14px]">
                   <li>
                     <a href="#">About Us</a>
@@ -250,7 +251,7 @@ function Footer() {
               </div>
               {/* Stay Connected */}
               <div>
-                <h3 className="font-semibold mb-3 text-[20px]">
+                <h3 className="font-semibold mb-3 text-[16px]">
                   Stay Connected
                 </h3>
                 <p className="text-[14px] leading-relaxed">
