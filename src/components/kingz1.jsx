@@ -123,7 +123,9 @@ function Footer() {
                   </div>
 
                   <div className="ml-[50px]">
-                    <div className="font-semibold  text-[24px]">Email:</div>{" "}
+                    <div className="font-semibold mb-[6px]  text-[24px]">
+                      Email:
+                    </div>{" "}
                     <a
                       href="mailto:info@glidepath.com"
                       className="hover:underline text-[#292D32] text-[18px]"
