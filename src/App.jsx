@@ -13,7 +13,6 @@ function App() {
 					element={<Home />}
 				/>
 			</Routes>
-			<Footer />
 		</Router>
 	);
 }

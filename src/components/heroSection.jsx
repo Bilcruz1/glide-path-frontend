@@ -156,12 +156,18 @@ export default function HeroSlider() {
 								opacity: 0,
 							}}
 						>
-							<button
-								className="bg-[#0077B6]  text-[#ffffff] font-semibold lg:py-[19px] lg:px-[98px] py-[14px] px-[35px] sm:px-8 rounded-lg transition-colors duration-200 whitespace-nowrap text-sm sm:text-base"
-								style={{ backgroundColor: '#0B7FAF' }}
+							<a
+								href="https://wa.me/2347074213046?text=Hello%20I%20want%20to%20plan%20a%20trip"
+								target="_blank"
+								rel="noopener noreferrer"
 							>
-								Plan My Trip | Contact Us
-							</button>
+								<button
+									className="bg-[#0077B6] text-[#ffffff] font-semibold lg:py-[19px] lg:px-[98px] py-[14px] px-[35px] sm:px-8 rounded-lg transition-colors duration-200 whitespace-nowrap text-sm sm:text-base"
+									style={{ backgroundColor: '#0B7FAF' }}
+								>
+									Plan My Trip | Contact Us
+								</button>
+							</a>
 						</div>
 					</div>
 				</div>
@@ -178,61 +184,129 @@ export default function HeroSlider() {
 
 						{/* Social icons container - mobile only, positioned at right */}
 						<div className="lg:hidden absolute right-0 top-0  bg-[#ffffff]/80 shadow-xl rounded-l-3xl flex flex-col items-center justify-center p-2 space-y-2">
-							<img
-								src={instagram}
-								alt="instagram"
-								className="w-[25px] h-[25px]"
-							/>
-							<img
-								src={fb}
-								alt="facebook"
-								className="w-[25px] h-[25px]"
-							/>
-							<img
-								src={twitter}
-								alt="twitter"
-								className="w-[25px] h-[25px]"
-							/>
-							<img
-								src={linkedin}
-								alt="linkedin"
-								className="w-[25px] h-[25px]"
-							/>
-							<img
-								src={tiktok}
-								alt="tiktok"
-								className="w-[25px] h-[25px]"
-							/>
+							<a
+								href="https://www.instagram.com/glidepath.travel"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<img
+									src={instagram}
+									alt="instagram"
+									className="w-[25px] h-[25px]"
+								/>
+							</a>
+
+							<a
+								href="https://www.facebook.com/yourusername"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<img
+									src={fb}
+									alt="facebook"
+									className="w-[25px] h-[25px]"
+								/>
+							</a>
+
+							<a
+								href="https://x.com/glidepath_tt"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<img
+									src={twitter}
+									alt="twitter"
+									className="w-[25px] h-[25px]"
+								/>
+							</a>
+
+							<a
+								href="https://www.linkedin.com/in/yourusername"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<img
+									src={linkedin}
+									alt="linkedin"
+									className="w-[25px] h-[25px]"
+								/>
+							</a>
+
+							<a
+								href="https://www.tiktok.com/@glidepath.travel"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<img
+									src={tiktok}
+									alt="tiktok"
+									className="w-[25px] h-[25px]"
+								/>
+							</a>
 						</div>
 					</div>
 
 					{/* Social icons container - desktop only */}
 					<div className="hidden lg:flex bg-[#ffffff]/80 -ml-4  z-50 shadow-xl rounded-l-3xl flex-col items-center justify-center h-fit p-5 space-y-3">
-						<img
-							src={instagram}
-							alt="instagram"
-							className="w-[73px] h-[73px]"
-						/>
-						<img
-							src={fb}
-							alt="facebook"
-							className="w-[73px] h-[73px]"
-						/>
-						<img
-							src={twitter}
-							alt="twitter"
-							className="w-[73px] h-[73px]"
-						/>
-						<img
-							src={linkedin}
-							alt="linkedin"
-							className="w-[73px] h-[73px]"
-						/>
-						<img
-							src={tiktok}
-							alt="tiktok"
-							className="w-[73px] h-[73px]"
-						/>
+						<a
+							href="https://www.instagram.com/glidepath.travel"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<img
+								src={instagram}
+								alt="instagram"
+								className="w-[73px] h-[73px]"
+							/>
+						</a>
+
+						<a
+							href="https://www.facebook.com/yourusername"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<img
+								src={fb}
+								alt="facebook"
+								className="w-[73px] h-[73px]"
+							/>
+						</a>
+
+						<a
+							href="https://x.com/glidepath_tt"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<img
+								src={twitter}
+								alt="twitter"
+								className="w-[73px] h-[73px]"
+							/>
+						</a>
+
+						<a
+							href="https://www.linkedin.com/in/yourusername"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<img
+								src={linkedin}
+								alt="linkedin"
+								className="w-[73px] h-[73px]"
+							/>
+						</a>
+
+						<a
+							href="https://www.tiktok.com/@glidepath.travel"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<img
+								src={tiktok}
+								alt="tiktok"
+								className="w-[73px] h-[73px]"
+							/>
+						</a>
 					</div>
 				</div>
 			</div>

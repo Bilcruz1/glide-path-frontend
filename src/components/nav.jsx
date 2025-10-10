@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import logo from '../assets/icons/glidePath-logo.svg';
 import hiOpen from '../assets/icons/Glide-Burger.svg';
-import hiClose from '../assets/icons/zitaj_close.svg';
+import hiClose from '../assets/icons/Glide-BurgerC.svg';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { scroller } from 'react-scroll';
 import Hamburger from './hamburger.jsx';
@@ -19,12 +19,12 @@ export default function Nav() {
 		'services',
 		'packages',
 		'Testmonies',
-		'Contact us',
+		'contact us',
 	];
 
 	useEffect(() => {
-		if (location.pathname === '/contact-us') {
-			setActiveSection('contact-us');
+		if (location.pathname === '/contact') {
+			setActiveSection('contact');
 		} else {
 			setActiveSection('home');
 		}
@@ -135,7 +135,6 @@ export default function Nav() {
 							/>
 						</button>
 
-						{/* Desktop nav */}
 						<div className="hidden lg:flex items-center space-x-8">
 							{sections.map(section => (
 								<button

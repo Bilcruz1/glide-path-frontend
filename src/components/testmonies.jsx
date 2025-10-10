@@ -158,12 +158,12 @@ const Testimonies = () => {
 			id="Testmonies"
 		>
 			<div className="max-w-7xl mx-auto">
-				<h1 className="text-[24px] lg:text-[48px] font-semibold text-center text-[#005B8A] mb-12">
+				<h1 className="text-[24px] lg:text-[48px] px-3 font-semibold text-center text-[#005B8A] mb-12">
 					What Customers Say About Us
 				</h1>
 
 				{/* Wrapper with padding for avatars */}
-				<div className="relative pt-12">
+				<div className="relative lg:pt-12 pt-6">
 					{/* Scroll container with clip-path to only hide horizontal overflow */}
 					<div
 						ref={scrollContainerRef}
@@ -183,7 +183,7 @@ const Testimonies = () => {
 								data-slide
 								className="flex-shrink-0 w-full md:w-1/3 snap-start"
 							>
-								<div className="relative bg-white rounded-3xl p-8 pt-16 shadow-lg h-full flex flex-col items-center text-center mx-2">
+								<div className="relative bg-white rounded-3xl lg:p-8 p-4 pt-16 shadow-lg h-full flex flex-col items-center text-center mx-2">
 									{/* Avatar Image - positioned outside the card */}
 									<div
 										className="absolute left-1/2 -translate-x-1/2"
@@ -224,7 +224,7 @@ const Testimonies = () => {
 									key={i}
 									onClick={() => handleDotClick(i)}
 									className={`transition-all duration-300 ease-out rounded-full ${
-										active ? 'bg-blue-600 w-6 h-2' : 'bg-black w-2 h-2'
+										active ? 'bg-[#177BA5] w-6 h-2' : 'bg-black w-2 h-2'
 									}`}
 								/>
 							);

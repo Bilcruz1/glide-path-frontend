@@ -78,7 +78,7 @@ export default function Packages() {
 			className="relative min-h-screen font-Montserrat bg-cover bg-center lg:pt-[100px] py-16 "
 			id="packages"
 		>
-			<div className="relative z-10 max-w-6xl mx-auto">
+			<div className="relative  max-w-6xl mx-auto">
 				<h2 className="text-[#DBC087] text-[24px] lg:text-5xl font-bold text-center lg:mb-[70px] mb-[30px]">
 					Upcoming Offers
 				</h2>
