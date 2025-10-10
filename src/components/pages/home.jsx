@@ -24,6 +24,8 @@ const Home = () => {
 				<Kingz />
 				<Kingz1 />
 				<Kingz2 />
+
+				{/* <FindUs /> */}
 			</div>
 		</>
 	);

@@ -183,7 +183,7 @@ export default function HeroSlider() {
 						/>
 
 						{/* Social icons container - mobile only, positioned at right */}
-						<div className="lg:hidden absolute right-0 top-0  bg-[#ffffff]/80 shadow-xl rounded-l-3xl flex flex-col items-center justify-center p-2 space-y-2">
+						<div className="lg:hidden fixed right-0 top-1/3 z-50 bg-[#ffffff]/80 shadow-xl rounded-l-3xl flex flex-col items-center justify-center p-2 space-y-2">
 							<a
 								href="https://www.instagram.com/glidepath.travel"
 								target="_blank"
