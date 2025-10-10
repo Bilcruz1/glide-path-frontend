@@ -204,9 +204,9 @@ function Footer() {
       {/* mobile section*/}
       <section className="lg:hidden text-[#ffffff] font-Montserrat">
         <footer className="py-10 px-[16px]   bg-[url('/src/assets/images/contactbgm.png')]  bg-cover font-Montserrat">
-          <div className="  px-[16px] mt-10">
-            <div className="col-span-2 -mt-10">
-              <form className="flex flex-col gap-[30px] min-w-[350px]">
+          <div className="    ">
+            <div className="  ">
+              <form className="flex flex-col gap-[30px]  ">
                 <input
                   type="text"
                   placeholder="Name"

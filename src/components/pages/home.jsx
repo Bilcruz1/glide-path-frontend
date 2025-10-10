@@ -27,10 +27,6 @@ const Home = () => {
         <Kingz1 />
         <Kingz2 />
 
-        <Brand />
-        <Cng />
-
-        <ContactUs />
         {/* <FindUs /> */}
       </div>
     </>
