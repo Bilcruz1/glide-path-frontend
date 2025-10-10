@@ -247,7 +247,9 @@ export default function HeroSlider() {
 					</div>
 
 					{/* Social icons container - desktop only */}
-					<div className="hidden lg:flex bg-[#ffffff]/80 -ml-4  z-50 shadow-xl rounded-l-3xl flex-col items-center justify-center h-fit p-5 space-y-3">
+					{/* Social icons container - desktop only */}
+					{/* Social icons container - desktop only, fixed to right side of screen */}
+					<div className="hidden lg:flex fixed right-0 top-1/4 z-50 bg-[#ffffff]/80 shadow-xl rounded-l-3xl flex-col items-center justify-center h-fit p-5 space-y-3 transition-all duration-300 hover:bg-white hover:shadow-2xl">
 						<a
 							href="https://www.instagram.com/glidepath.travel"
 							target="_blank"
