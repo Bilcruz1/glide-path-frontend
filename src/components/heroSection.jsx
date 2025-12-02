@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -8,7 +8,7 @@ import 'swiper/css';
 import slide1 from '../assets/images/home_1.png';
 import slide2 from '../assets/images/home_2.png';
 import slide3 from '../assets/images/home_3.png';
-import glideHome from '../assets/images/Glide-Home.jpg';
+import glideVideo from '../assets/glidePathVidd.mp4';
 import tiktok from '../assets/icons/Glide-Tiktok.svg';
 import fb from '../assets/icons/Glide-Facebook.svg';
 import twitter from '../assets/icons/Glide-X.svg';
@@ -87,7 +87,46 @@ const textVariants = {
 };
 
 export default function HeroSlider() {
-	const [activeIndex, setActiveIndex] = React.useState(0);
+	const [activeIndex, setActiveIndex] = useState(0);
+	const videoRef = useRef(null);
+	const [isPlaying, setIsPlaying] = useState(false);
+
+	useEffect(() => {
+		const observer = new IntersectionObserver(
+			entries => {
+				entries.forEach(entry => {
+					if (entry.isIntersecting) {
+						videoRef.current?.play();
+						setIsPlaying(true);
+					} else {
+						videoRef.current?.pause();
+						setIsPlaying(false);
+					}
+				});
+			},
+			{ threshold: 0.5 }
+		);
+
+		if (videoRef.current) {
+			observer.observe(videoRef.current);
+		}
+
+		return () => {
+			if (videoRef.current) {
+				observer.unobserve(videoRef.current);
+			}
+		};
+	}, []);
+
+	const togglePlayPause = () => {
+		if (isPlaying) {
+			videoRef.current?.pause();
+			setIsPlaying(false);
+		} else {
+			videoRef.current?.play();
+			setIsPlaying(true);
+		}
+	};
 
 	return (
 		<>
@@ -176,11 +215,38 @@ export default function HeroSlider() {
 			<div className="bg-[url('/src/assets/images/glidePath-heroPage.jpg')]">
 				<div className="relative lg:pl-[80px]  flex w-screen">
 					<div className="relative w-full">
-						<img
-							src={glideHome}
-							alt="glidehome"
+						<video
+							ref={videoRef}
+							src={glideVideo}
 							className="w-full rounded-lg"
+							muted
+							loop
+							playsInline
 						/>
+						<button
+							onClick={togglePlayPause}
+							className="absolute inset-0 flex items-center justify-center text-white text-6xl cursor-pointer transition border-none bg-transparent hover:bg-black hover:bg-opacity-20"
+						>
+							{isPlaying ? (
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									className="w-6 h-6 text-gray-300"
+									fill="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z" />
+								</svg>
+							) : (
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									className="w-6 h-6 text-gray-300"
+									fill="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<path d="M5 3v18l15-9L5 3z" />
+								</svg>
+							)}
+						</button>
 
 						{/* Social icons container - mobile only, positioned at right */}
 						<div className="lg:hidden fixed right-0 top-1/3 z-50 bg-[#ffffff]/80 shadow-xl rounded-l-3xl flex flex-col items-center justify-center p-2 space-y-2">
