@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import Packages from './packages';
-import hajj from '../assets/images/Glide-Hajj.png';
+import hajj from '../assets/images/Glide-Hajj.jpg';
 import umrah from '../assets/images/Glide-Umrah.png';
 import Hotel from '../assets/images/Glide-Hotel.png';
 import Ticket from '../assets/images/Glide-Ticket.png';
